@@ -20,6 +20,10 @@ int numberOfDevices;
 DeviceAddress tempDeviceAddress; 
 
 void setup(){
+  WiFi.disconnect();
+  WiFi.persistent(false);
+  WiFi.mode(WIFI_AP);
+	
   // start serial port
   Serial.begin(115200);
   
