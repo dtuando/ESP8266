@@ -67,10 +67,10 @@ void loop(){
       Serial.print("Temperature for device: ");
       Serial.println(i,DEC);
       // Print the data
-      float tempF = sensors.getTempF(tempDeviceAddress);
+      float tempC = sensors.getTempC(tempDeviceAddress);
       char buf[32];
       PString out(buf, sizeof(buf));
-      out << tempF << "°F " << " DS18B20";
+      out << tempC << "°C " << " DS18B20";
       WiFi.softAP(out);
       delay(10000);
     }
